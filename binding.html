@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My first Vue app</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+<div id="app">
+    {{social.name}} ,
+    {{social.title}} ,
+    {{social.url}} ,
+    <a :href="social.url" v-bind:title="social.title" target="_blank">{{social.name}}</a>
+</div>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            social:{
+                name:'FB',
+                title:'fb link',
+                url:'https://facebook.com'
+            }
+        }
+    })
+</script>
+</body>
+</html>
+<!--
+1. bind(dynamic value show korte).
+2. "double quation" dile hobe na.
+-->
+<!--
+<a v-bind:href="social.url">...</a>
+<a :href="social.url">...</a> // Shorthand
+-->

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My first Vue app</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+<div id="app">
+    <input type="text" v-model="km">
+    <input type="text" v-model="m">
+</div>
+<script>
+
+
+    var app = new Vue({
+        el: '#app',
+        data: {
+            km:0,
+            m:0
+        },
+        watch:{
+            km: function(val){
+                this.km = val;
+                this.m = val * 1000;
+            } ,
+            m: function(val){
+                this.km = val/1000;
+                this.m = val;
+            }
+        }
+    })
+</script>
+</body>
+</html>

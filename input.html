@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My first Vue app</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+<div id="app">
+    <input type="text" v-model="name">
+    {{ name }}
+    <input type="checkbox" v-model="skill" value="web" id="exampleCheck1">
+    <input type="checkbox" v-model="skill" value="app" id="exampleCheck2">
+    {{skill}}
+    <input type="radio" v-model="gender" value="Male" id="radio1">
+    <input type="radio" v-model="gender" value="Female" id="radio2">
+    {{gender}}
+</div>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            name: '',
+            skill:[],    //for checkbox
+            gender:''    //radio button
+        }
+    })
+</script>
+</body>
+</html>
